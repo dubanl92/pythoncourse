@@ -1,0 +1,11 @@
+Se requiere crear un programa que reciba un argumento por consola
+y permita saber cuantas veces se repite una letra
+
+eje :
+
+    holaa
+
+    h --> 1
+    o --> 1
+    l --> 1
+    a --> 2

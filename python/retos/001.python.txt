@@ -1,0 +1,10 @@
+definir 3 variables sin tipo de dato, es decir de manera dinamica:
+  
+  nommbre = cadena de texto
+  edad    = entero
+  cargo   = cadena de texto
+  tags    = lista
+  suenos. = tuplas
+
+por cada una imprimir el valor y el tipo, luego se debera hacer lo mismo
+pero utilizando denifición de tipo de dato(manera semantica)
