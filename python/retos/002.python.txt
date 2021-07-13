@@ -1,0 +1,10 @@
+Supongamos que tenemos un parametro(texto) llamado :
+
+appname=pythonbancolombia.corp
+
+la idea es que este parametro quede segmentado en dos variables, esto se debe de 
+hacer de las siguientes formas:
+
+1. por indice(variable[ri:rf:in])
+2. usando split
+3. se debera mostar el contenido de las variables usando print por variable y por lista

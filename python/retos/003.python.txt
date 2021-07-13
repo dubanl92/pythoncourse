@@ -1,0 +1,16 @@
+Se tiene el siguiente texto:
+
+"""
+nombre=luis
+apellido=vasquez
+edad=22
+sexo=
+fechanacimiento=
+"""
+
+responder :
+  A.determitar si la cantidad de parametros y valores son iguales
+  B. determinar cuantos valores de las llaves son numericos
+  
+  clave : se deben hacer dos splits
+  restriccion : no ciclos

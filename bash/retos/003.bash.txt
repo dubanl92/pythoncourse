@@ -1,0 +1,6 @@
+Se requiere optimizar la calculadora creada previamente
+
+requerimientos
+1. los metodos deben estar en un modulo aparte llamado utilitario.sh
+2. se debe crear un archivo app.sh donde se importe ese archivo y se llame las funciones creadas
+

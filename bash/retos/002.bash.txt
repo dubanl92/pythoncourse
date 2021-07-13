@@ -1,0 +1,10 @@
+Se requiere crear una shell script que permita realizar una calculadora con los siguientes metodos
+
+sumar
+restar
+dividir
+multiplicar
+
+requerimientos
+
+1. se debe enviar por consola los numeros y el signo

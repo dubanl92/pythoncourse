@@ -1,0 +1,13 @@
+Se requiere crear un archivo de configuracion a partir de codigo, el cual contenga 
+las siguientes propiedades:
+
+nombre_completo
+apellido_completo
+year
+month
+day
+
+nota: los valores de year,month, date deben ser calculados dinamicamente
+
+una vez que se tenga esta información, se debera guardar en un archivo con
+extensión . properties
