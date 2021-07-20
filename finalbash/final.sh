@@ -31,25 +31,36 @@ RUTA=environment/pythoncourse/finalbash
 HOME=${HOME}/${RUTA}
 
 ###### GENERO VARIABLES CON LAS RUTAS QUE SE VAN A CREAR #################
-RUTA1=${HOME}/takeoff-mission/devices/${DIA1}
+RUTA1=${HOME}/takeoff-mission/devices
 RUTA2=${HOME}/takeoff-mission/logsapolo11/${DIA1}
 
-###### VARIABLE QUE TIENE EL VALOR DE LOS ESTADOS ##################
+###### VARIABLES QUE TIENE EL VALOR DE LOS ESTADOS Y PROYECTOS ##################
 estados=(UNKNOW EXCELENT GOOD WARNING KILL)
+proyectos=(ORB CNL MRS UNK)
 
-mkdir -p ${HOME}/takeoff-mission/{devices,logsapolo11,config,stats} #2> /dev/null
-mkdir -p ${HOME}/takeoff-mission/devices/{$DIA1},${BK} #2> /dev/null
-mkdir -p ${HOME}/takeoff-mission/logsapolo11/${DIA1}
+mkdir -p ${HOME}/takeoff-mission/{devices,logsapolo11,config,stats} 
+mkdir -p ${HOME}/takeoff-mission/devices
+mkdir -p ${HOME}/takeoff-mission/logsapolo11/{${DIA1},${BK}}
 
-sudo groupadd nasa 2>> ${RUTA2}/error.log
-sudo useradd -G nasa orbit 2>> ${RUTA2}/error.log
-sudo useradd -G nasa colony 2>> ${RUTA2}/error.log
-sudo useradd -G nasa mars 2>> ${RUTA2}/error.log
-#sudo useradd -G nasa unknow 2> ${RUTA2}/error.log
+sudo groupadd nasa 2>> ${RUTA1}/error.log
+sudo useradd -G nasa ORB 2>> ${RUTA1}/error.log
+sudo useradd -G nasa CNL 2>> ${RUTA1}/error.log
+sudo useradd -G nasa MRS 2>> ${RUTA1}/error.log
+sudo useradd -G nasa UNK 2>> ${RUTA1}/error.log
 
 echo $DIA1, $DIA2, $BK, $RUTA, $HOME, $RUTA1, $RUTA2,$estados
 
-#if [ "$DIA1" != "$DIA2" ]; then
+if [ "$DIA1" != "$DIA2" ]; then
 
-
-#fi
+   for i in {1..100};
+     do
+     
+       estado=`echo ${estados[$(($RANDOM%5))]}`
+       proyecto=`echo ${proyectos[$(($RANDOM%4))]}`
+	   echo $estado > ${RUTA2}/APL-$proyecto-000$i.log 2>> ${RUTA1}/error.log
+       chmod 777 ${RUTA2}/APL-$proyecto-000$i.log 2>> ${RUTA1}/error.log
+       sudo chown $proyecto:nasa  ${RUTA2}/APL-$proyecto-000$i.log 2>> ${RUTA1}/error.log
+       
+     done
+   DIA2=`date +"%d-%m-%Y"`
+fi
