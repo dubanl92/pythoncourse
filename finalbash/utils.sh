@@ -32,7 +32,8 @@ HOME=${HOME}/${RUTA}
 
 ###### GENERO VARIABLES CON LAS RUTAS QUE SE VAN A CREAR #################
 RUTA1=${HOME}/takeoff-mission/devices
-RUTA2=${HOME}/takeoff-mission/logsapolo11/${DIA1}
+#RUTA2=${HOME}/takeoff-mission/logsapolo11/${DIA1}
+RUTA2=${HOME}
 
 ###### VARIABLES QUE TIENE EL VALOR DE LOS ESTADOS Y PROYECTOS ##################
 estados=(UNKNOW EXCELENT GOOD WARNING KILL)

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source utils.sh
+source ./utils.sh
 
 function logsapolo11() {
        estado=`echo ${estados[$(($RANDOM%5))]}`
@@ -12,7 +12,7 @@ function logsapolo11() {
 
 if [ "$DIA1" != "$DIA2" ]; then
 
-   for i in {1..100};
+   for i in {1..10};
      do
        logsapolo11
      done
