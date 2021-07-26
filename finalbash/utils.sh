@@ -32,17 +32,19 @@ HOME=${HOME}/${RUTA}
 
 ###### GENERO VARIABLES CON LAS RUTAS QUE SE VAN A CREAR #################
 RUTA1=${HOME}/takeoff-mission/devices
-#RUTA2=${HOME}/takeoff-mission/logsapolo11/${DIA1}
-RUTA2=${HOME}
+RUTA2=${HOME}/takeoff-mission/logsapolo11/${DIA1}
+#RUTA2=${HOME}
 
 ###### VARIABLES QUE TIENE EL VALOR DE LOS ESTADOS Y PROYECTOS ##################
 estados=(UNKNOW EXCELENT GOOD WARNING KILL)
 proyectos=(ORB CNL MRS UNK)
 
+##### CREO LAS CARPETAS #####################
 mkdir -p ${HOME}/takeoff-mission/{devices,logsapolo11,config,stats} 
 mkdir -p ${HOME}/takeoff-mission/devices
 mkdir -p ${HOME}/takeoff-mission/logsapolo11/{${DIA1},${BK}}
 
+##### GENERO EL GRUPO NASA Y LOS USUARIOS ############
 sudo groupadd nasa 2>> ${RUTA1}/error.log
 sudo useradd -G nasa ORB 2>> ${RUTA1}/error.log
 sudo useradd -G nasa CNL 2>> ${RUTA1}/error.log
